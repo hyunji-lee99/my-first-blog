@@ -1,7 +1,15 @@
 <html>
-<head><title>hyunji's blog</title></head>
+<head>
+ <title>hyunji's blog</title>
+ <h1>Django Girls Blog</h1>
+</head>
 <body>
- <h1>Hi there!</h1>
- <p>It works!</p>
+ {% for post in posts %}
+ 	<div>
+		<p>published: {{post.published_date}}</p>
+		<h1><a href="">{{post.title}}</a></h1>
+		<p>{{post.text}}</p>
+	</div>	
+ {% endfor %}
 </body>
 </html>
