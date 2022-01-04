@@ -1,0 +1,26 @@
+{% load static %}
+  
+<html>
+<head>
+ <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+ <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+ <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+ <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+ <title>hyunji's blog</title>
+    <div class="page-header">
+        <h1><a href="/">Django Blog</a></h1>
+    </div>
+</head>
+<body>
+ <div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+	        {% block content %}
+            {% endblock %}
+{#            템플릿 태그로 html 내에 들어갈 수 있는 공간을 만들었음.#}
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
